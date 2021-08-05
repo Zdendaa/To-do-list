@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+.listContainer {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list {
+  width: 40%;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 10px;
+  
+}
+.listItem {
+  width: 80%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.reminder {
+  border-left: 4px solid rgb(230, 0, 0);
+}
+
+.addDivItem {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.colorItem {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.deleteTaskIcon {
+  position: relative;
+  right: -20px;
+  top: -40px;
+  color: red;
+  cursor: pointer;
+}
+
+.inputAdd, .inputAddTask {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 20px;
+  width: 80%;
+}
+.inputAdd:focus, .inputAddTask:focus {
+  outline: none;
+}
+.inputAdd::placeholder, .inputAddTask::placeholder{
+  color: white;
+}
+
+.inputAddTask{
+  padding-bottom: 20px;
+}
+.kategorieCheck {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+}
+
+.addForm {
+  padding: 20px 10px 20px 10px;
+}
+
+.addListIcon {
+  cursor: pointer;
+}
+
+.descListInput, .whatTaskInput {
+  border: none;
+  background-color:transparent;
+  font-size: 25px;
+}
+
+.categoryTaskInput { 
+  border: none;
+  background-color:transparent;
+  font-size: 15px;
+  color: rgb(40, 128, 5);
+}
+.descListInput {
+  width: 150%;
+}
+
+.whatTaskInput {
+  width: 100%;
+}
+
+.descListInput:focus, .whatTaskInput:focus, .categoryTaskInput:focus {
+  outline: none;
+}
+
+.complete {
+  text-decoration: line-through;
+}
+
+.selectDivMain {
+  width: 80%;
+  display: flex;
+ 
+  justify-content: space-between;
+}
+
+.categorySelect {
+  min-width: 100px;
+  padding: 5px 15px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.categorySelect option {
+  border: none; 
+}
+
+.categorySelect:focus {
+  outline : none;
+}
+
