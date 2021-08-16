@@ -143,3 +143,62 @@
   outline : none;
 }
 
+.linkButtonProfile {
+  padding: 12px 24px;
+  background-color: black;  
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  border-radius: 7px;
+  margin: 5px;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+}
+
+.profileContainer, .loginConainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.profileContainer *, .loginConainer * {
+  margin: 10px;
+}
+
+.spanInfo {
+  color: rgb(193, 214, 4);
+}
+
+.inputNumber, .mainBtn {
+  padding: 8px;
+  border: 2px solid black;
+  border-radius: 7px;
+}
+
+.mainBtn {
+  cursor: pointer;
+}
+
+.inputNumber:focus {
+  outline: none;
+  background-color: black;
+  color: white;
+}
+
+.loginColor {
+  position: relative;
+  background-color: rgb(233, 233, 233);
+  display: flex;
+  border-radius: 4px;
+  justify-content: space-between;
+}
+
+.profileColor {
+  position: relative;
+  background-color: rgb(233, 233, 233);
+  border-radius: 4px;
+  text-align: center;
+}

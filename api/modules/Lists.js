@@ -4,7 +4,7 @@ const ListsSchema = new mongoose.Schema({
     desc: {
         type: String,
         required: true
-    }
+    } 
 },
 {timestamps: true}
 );

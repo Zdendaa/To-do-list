@@ -1,16 +1,19 @@
 import List from "../components/List"
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useContext } from 'react'
 import axios from 'axios'
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import { Spring, animated } from 'react-spring'
+import { UserContext } from "../context/UserContext";
+import { Link } from "react-router-dom";
 
 function Home(){
     const [tasks, setTask] = useState([]);
-    
+    const user = useContext(UserContext);
 
     const desc = useRef();
 
     useEffect(() => {
+        
         const getTasks = async () => {
             const tasksMain = await axios("lists/getLists");   
             setTask(tasksMain.data);
@@ -33,8 +36,12 @@ function Home(){
       setTask(tasks.filter(tasks => tasks._id !== id));
     }
     return (
+      <>
+        
         <div className="listContainer">
-          
+        <Link to="/profile" className="linkButtonProfile">
+          {user?.name}
+        </Link>
           <div className="list">
               <h1 style={{margin: "20px", color: "black"}}>Úkolníček</h1>
               <form style={{backgroundColor: "black"}} className="addForm listItem" onSubmit={addList}>
@@ -59,6 +66,7 @@ function Home(){
               }
           </div>    
         </div>
+      </>
     )
 }
 

@@ -1,11 +1,12 @@
 //import axios from "axios";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Task from "../components/Task";
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import axios from "axios";
 import { animated, Spring } from "react-spring";
+import { UserContext } from "../context/UserContext";
 
 const Tasks = () => {
     const {id: idList, listName } = useParams();
@@ -17,6 +18,8 @@ const Tasks = () => {
 
     const what = useRef();
     const category = useRef();
+
+    const user = useContext(UserContext);
 
     useEffect(() => {
         const getAllTasks = async () => {
@@ -90,6 +93,9 @@ const Tasks = () => {
 
     return (
         <div className="listContainer">
+            <Link to="/profile" className="linkButtonProfile">
+                {user?.name}
+            </Link>
             <div className="list">
                 <h1 style={{padding: "20px", color: "black"}}>{listName}</h1>
                 <span>{`${lenghtOfCompleted} z ${jsonTasks.length}`}</span>
